@@ -2,6 +2,21 @@
 
 This is the source code for the BIS Lost and Found IA. You are allowed to do whatever you like outside the context of the IB as long as you attribute me. This means that you are not allowed to use this code, partially or in full in any formal submissions to the IB. I am not responsible for any consequences that may arise from the use of this code. Incase of any dispute, I withold all the rights to this codebase. This code is provided as is and is not guaranteed to work in all environments. If you have any questions, feel free to reach out at hi[at]aryanmukherjee.com. 
 
+<p align="center">
+    <a href="https://github.com/Bavarian-International-School/BIS-Lost-and-Found-Website/stargazers">
+        <img src="https://img.shields.io/github/stars/Bavarian-International-School/BIS-Lost-and-Found-Website?style=social">
+    </a>
+    <a href="https://python.org/">
+        <img src="https://img.shields.io/badge/python-3.11-blue">
+    </a>
+    <a href="https://github.com/ambv/black">
+        <img src="https://img.shields.io/badge/code%20style-black-black.svg">
+    </a>
+    <a href="https://github.com/PyCQA/isort">
+        <img src="https://img.shields.io/badge/imports-isort-black.svg">
+    </a>
+</p>
+
 ## Installation and Setup
 
 ### Windows
