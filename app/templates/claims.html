@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block main-content %}
+    <div class="spacer container">
+        <center>
+            <h1>Items with Claim Placed</h1>
+        </center>
+        {% for item in items %}
+            <div>
+                <h2>{{ item.category }}</h2>
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <img src="{{ item.image.url }}"
+                             alt="{{ item.description }}"
+                             width="200px"
+                             height="auto"
+                             class="img-fluid">
+                    </div>
+                    <div class="col-6">
+                        <h5>
+                            Claimed by: <span class="badge bg-primary">{{ item.claimed_by.email }}</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock main-content %}

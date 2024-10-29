@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main-content %}
+    <div class="spacer container">
+        <center>
+            {% if search %}
+                <br>
+                <h1>Search Results for: {{ search }}</h1>
+                <br>
+                <div class="m-3">
+                    <div class="owl-carousel slider">
+                        {% for result in results %}
+                            <a href="{% url 'item-detail' result.id %}" class="btn">
+                                <div class="item">
+                                    <img src="{{ result.image.url }}" alt="" width="auto" height="200px">
+                                    <span class="fw-bold">{{ result.name }}</span>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <h1>You haven't enterned anything into the search box</h1>
+            {% endif %}
+        </center>
+    </div>
+{% endblock main-content %}

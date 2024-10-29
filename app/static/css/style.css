@@ -1,0 +1,72 @@
+.owl-carousel .item{
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;;
+}
+.owl-next{
+    float:right;
+}
+.owl-prev{
+    float:left;
+}
+.owl-prev span{
+    font-size: 24px;
+    font-weight: bold;
+}
+.owl-next span{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #1c2331;
+}
+
+.address{
+    width: 60px;
+    background-color: #7c4dff;
+    height: 2px;
+}
+
+.contact{
+    width: 60px;
+    background-color: #7c4dff;
+    height: 2px;
+}
+
+.container {
+    position: relative;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.spacer {
+    margin-bottom: 10px;
+    margin-bottom: 300px;
+}
+
+.flexitem{
+    height: 65vh;
+}
+
+.copyright{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.links{
+    width: 60px;
+    background-color: #7c4dff;
+    height: 2px;
+}
+
+.light-mode, .light-mode .fw-bold, .light-mode .btn .theme {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode, .dark-mode .fw-bold, .dark-mode .btn .theme {
+    background-color: black;
+    color: white;
+}

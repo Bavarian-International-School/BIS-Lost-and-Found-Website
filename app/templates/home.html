@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Home
+{% endblock title %}
+{% load static %}
+{% block banner_slider %}
+    <div id="carouselExampleCaptions"
+         class="carousel slide"
+         data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            {% for image in images %}
+                <button type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide-to="{{ forloop.counter0 }}"
+                        {% if forloop.first %}class="active" aria-current="true"{% endif %}
+                        aria-label="Slide {{ forloop.counter }}"></button>
+            {% endfor %}
+        </div>
+        <div class="carousel-inner">
+            {% for image in images %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{% static image %}"
+                         width="100%"
+                         height="auto"
+                         class="d-block w-100"
+                         alt="banner image">
+                    <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="false"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+{% endblock banner_slider %}
+{% block main-content %}
+    {% for category in categories %}
+        <div class="m-3">
+            <h2>{{ category.name }}</h2>
+            <div class="owl-carousel slider">
+                {% for item in category.items %}
+                    <a href="{% url 'item-detail' item.id %}" class="btn">
+                        <div class="item">
+                            <img src="{{ item.image.url }}" alt="" width="auto" height="200px">
+                            <span class="fw-bold">{{ item.name }}</span>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock main-content %}

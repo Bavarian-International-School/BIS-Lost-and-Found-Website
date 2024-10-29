@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Lost Item Detail View
+{% endblock title %}
+{% block main-content %}
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-sm-6 text-center align-self-center">
+                <img src="{{ product.image.url }}"
+                     alt=""
+                     width="auto"
+                     height="auto"
+                     class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-sm-5 offset-sm-1">
+                <h2>Title: {{ product.name }}</h2>
+                <hr>
+                <p>{{ product.description }}</p>
+                <br>
+                <form method="post" action="{% url 'claim' product.id %}">
+                    {% csrf_token %}
+                    <button class="btn btn-danger shadow" type="submit">Claim</button>
+                </form>
+                <h5 class="mt-5">Please be sure this belongs to you before claiming</h5>
+            </div>
+        </div>
+    </div>
+{% endblock main-content %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Hawkeye™ Image Classifier
+{% endblock title %}
+{% load crispy_forms_tags %}
+{% block main-content %}
+    <body>
+        <div class="spacer container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card p-4">
+                        <div class="card-header bg-transparent border-0">
+                            <h2 class="text-center mb-3">Hawkeye™ Image Classifier</h2>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <label for="formFile" class="form-label">Upload Files Here</label>
+                                {{ form }}
+                                <br>
+                                <button type="submit" class="btn btn-danger shadow px-5 py-2 ms-4">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock main-content %}
